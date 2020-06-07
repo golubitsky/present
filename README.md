@@ -9,6 +9,8 @@
 
 ## Development
 
+Available themes: https://github.com/hakimel/reveal.js/tree/master/css/theme/source
+
 ``` 
 npm install
 ```

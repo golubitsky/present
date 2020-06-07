@@ -2,7 +2,7 @@
 title: Slides Template
 separator: <!--s-->
 verticalSeparator: <!--v-->
-theme: solarized
+theme: sky
 revealOptions:
 
     transition: 'fade'
