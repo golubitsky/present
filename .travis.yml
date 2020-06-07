@@ -3,7 +3,7 @@ node_js: "6"
 
 install: npm install
 
-script: npm run generate
+script: npm run ci-build
 
 deploy:
   provider: pages

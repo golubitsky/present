@@ -11,6 +11,7 @@
     "reveal-md": "3.4.7"
   },
   "scripts": {
+    "ci-build": "reveal-md slides.md --static docs",
     "develop": "reveal-md slides.md --static docs"
   },
   "repository": {
