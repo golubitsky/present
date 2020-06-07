@@ -11,7 +11,7 @@ revealOptions:
 
 # Local
 
-It works!
+It works! One more time for good measure.
 
 and open a browser to view it
 

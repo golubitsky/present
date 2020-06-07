@@ -5,9 +5,9 @@
 * [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
 * Builds deploy to: https://golubitsky.github.io/present/
 
-## Usage
+* Based on [reveal-md](https://github.com/webpro/reveal-md)
 
-Install reveal-md
+## Development
 
 ``` 
 npm install
@@ -25,6 +25,4 @@ or to generate a static website in the `docs` subdirectory
 npm run generate
 ```
 
-This presentation uses [reveal-md](https://github.com/webpro/reveal-md) which uses [reveal.js](http://lab.hakim.se/reveal-js)
-
-[Based on this template](https://martinmurphy.github.io/slidestemplate)
+Gratitude: [this template](https://martinmurphy.github.io/slidestemplate)
