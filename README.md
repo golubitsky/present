@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/golubitsky/present.svg?branch=master)](https://travis-ci.com/golubitsky/present)
+
 * Live: https://golubitsky.github.io/present/
 
 ## Deploy
