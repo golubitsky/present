@@ -19,6 +19,19 @@ June 2020
 
 ## Another Slide
 
-* The first point on this slide.
-  + A sub-point.
-* Second point.
+<span class="fragment fade-in">
+  <span class="fragment highlight-red">
+    <span class="fragment fade-out">
+      Fade in > Turn red > Fade out
+    </span>
+  </span>
+</span>
+
+<!--s-->
+
+## Slide 3
+
+```ruby
+def hello_world
+end
+```

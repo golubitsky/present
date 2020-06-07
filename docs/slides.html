@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Slides Template</title>
+    <title>Refactoring - Golubitsky</title>
     <link rel="stylesheet" href="./css/reveal.css" />
     <link rel="stylesheet" href="./css/theme/white.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
@@ -25,10 +25,22 @@ June 2020
 
 ## Another Slide
 
-* The first point on this slide.
-  + A sub-point.
-* Second point.
-</script></section></div>
+<span class="fragment fade-in">
+  <span class="fragment highlight-red">
+    <span class="fragment fade-out">
+      Fade in > Turn red > Fade out
+    </span>
+  </span>
+</span>
+
+</script></section><section  data-markdown><script type="text/template">
+
+## Slide 3
+
+```ruby
+def hello_world
+end
+```</script></section></div>
     </div>
 
     <script src="./js/reveal.js"></script>

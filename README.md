@@ -26,6 +26,10 @@ npm run develop
 3. Open `docs/index.html` 
 
 * Can't get `--watch` to work.
+
+## Notes on the framework
+
+* Multiple animations per slide -> [fragments (not supported in md)](https://revealjs.com/fragments/)
 * Available themes: https://github.com/hakimel/reveal.js/tree/master/css/theme/source
 
 ## Based On
