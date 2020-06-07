@@ -11,7 +11,7 @@ revealOptions:
 
 # Local
 
-Testing in the docs folder.
+It works!
 
 and open a browser to view it
 

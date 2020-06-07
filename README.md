@@ -1,7 +1,9 @@
-* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the master branch.
+* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the `master` branch.
 
 * Builds generate static content in `/docs` based on `slides.md` .
-* Builds deploy to: 
+* Travis CI pushes the `gh-pages` branch.
+* [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
+* Builds deploy to: https://golubitsky.github.io/present/
 
 ## Usage
 
