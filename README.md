@@ -1,30 +1,31 @@
-* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the `master` branch.
+* Live: https://golubitsky.github.io/present/
 
+## Deploy
+
+* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the `master` branch.
 * Builds generate static content in `/docs` based on `slides.md` .
 * Travis CI pushes the `gh-pages` branch.
 * [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
-* Builds deploy to: https://golubitsky.github.io/present/
 
-* Based on [reveal-md](https://github.com/webpro/reveal-md)
+## Develop
 
-## Development
+1. Install dependencies
 
-Available themes: https://github.com/hakimel/reveal.js/tree/master/css/theme/source
-
-``` 
+``` sh
 npm install
 ```
 
-then to serve and open the presentation in a browser
+2. To generate a static website in the `docs` subdirectory
 
-``` 
-npm run presentation
+``` sh
+npm run develop
 ```
 
-or to generate a static website in the `docs` subdirectory
+3. Open `docs/index.html` 
 
-``` 
-npm run generate
-```
+* Can't get `--watch` to work.
+* Available themes: https://github.com/hakimel/reveal.js/tree/master/css/theme/source
 
-Gratitude: [this template](https://martinmurphy.github.io/slidestemplate)
+## Based On
+
+* [reveal-md](https://github.com/webpro/reveal-md)

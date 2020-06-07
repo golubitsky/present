@@ -1,23 +1,27 @@
 {
-  "name": "slidestemplate",
+  "name": "present",
   "version": "1.0.0",
-  "description": "Presentation: Slides Template",
+  "description": "* Live: https://golubitsky.github.io/present/",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "reveal-md": "3.4.7"
+  },
   "scripts": {
-    "presentation": "reveal-md slides.md",
-    "generate": "reveal-md slides.md --static docs"
+    "develop": "reveal-md slides.md --static docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martinmurphy/slidestemplate.git"
+    "url": "git+https://github.com/golubitsky/present.git"
   },
-  "author": "Martin Murphy",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/martinmurphy/slidestemplate/issues"
+    "url": "https://github.com/golubitsky/present/issues"
   },
-  "homepage": "https://github.com/martinmurphy/slidestemplate#readme",
-  "devDependencies": {
-    "reveal-md": "^0.4.2"
-  }
+  "homepage": "https://github.com/golubitsky/present#readme"
 }
