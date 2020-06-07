@@ -1,5 +1,5 @@
 ---
-title: Slides Template
+title: Refactoring - Golubitsky
 separator: <!--s-->
 verticalSeparator: <!--v-->
 theme: white
