@@ -4,18 +4,22 @@ separator: <!--s-->
 verticalSeparator: <!--v-->
 theme: solarized
 revealOptions:
+
     transition: 'fade'
+
 ---
+
 # Local
 
-Testing!!
+Testing in the docs folder.
 
 and open a browser to view it
 
 * clone the repo
 * edit the `slides.md` file
 * then:
-```
+
+``` 
 npm install
 npm run presentation
 ```
