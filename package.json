@@ -11,8 +11,8 @@
     "reveal-md": "3.4.7"
   },
   "scripts": {
-    "ci-build": "reveal-md slides.md --static docs",
-    "develop": "reveal-md slides.md --static docs"
+    "build": "reveal-md slides.md --static docs --static-dirs=assets",
+    "develop": "watch -n 1 npm run build"
   },
   "repository": {
     "type": "git",

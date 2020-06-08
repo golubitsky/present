@@ -17,19 +17,24 @@
 npm install
 ```
 
-2. To generate a static website in the `docs` subdirectory
+2. To continuously generate a static website in the `docs` subdirectory
 
 ``` sh
-npm run develop
+ npm run develop
 ```
 
-3. Open `docs/index.html` 
+3. Reload `docs/index.html` 
 
 * Can't get `--watch` to work.
 
 ## Notes on the framework
 
+* Speaker notes: https://github.com/webpro/reveal-md/#speaker-notes
+  + Start with `Note:` -- at the _end_ of a slide.
+  + View by pressing `s` during presentation.
+* Slide overview: `o` during presentation.
 * Multiple animations per slide -> [fragments (not supported in md)](https://revealjs.com/fragments/)
+  + surround with: `<!-- .element: class="fragment" -->` 
 * Available themes: https://github.com/hakimel/reveal.js/tree/master/css/theme/source
 
 ## Based On
