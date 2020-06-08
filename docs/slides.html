@@ -6,52 +6,101 @@
 
     <title>Refactoring - Golubitsky</title>
     <link rel="stylesheet" href="./css/reveal.css" />
-    <link rel="stylesheet" href="./css/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
     <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./_assets/style.css" />
 
   </head>
   <body>
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template">
 
-# Refactoring
+# <span class="font-green">Refactoring</span>
 
 Mikhail Golubitsky  
 Atlantis Technology  
 June 2020  
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section ><section data-markdown><script type="text/template">
 
-## My Biggest Refactoring* Project
+## Refactoring Résumé
 
-* From 3 different applications extract a copied-and-pasted energy production algorithm.
+</script></section><section data-markdown><script type="text/template">
 
-* Resulting REST API service had 800+ unit tests.
+### Energy Production API
 
-<!-- .element: class="fragment" -->
-
-* Smaller, incremental refactors throughout my programming career.
+Extracted 3 <span class="font-red">copied-and-pasted</span> and <span class="font-red">untested</span> instances of an energy production algorithm
 
 <!-- .element: class="fragment" -->
 
+Established <span class="font-green">integration test harness</span> to generate fleet-wide estimates on-demand
+
+<!-- .element: class="fragment" -->
+
+Resulting REST API service had <span class="font-green">800+ unit tests</span>
+
+<!-- .element: class="fragment" -->
+
+Empowered team to <span class="font-green">deliver algorithm updates quickly</span>
+
+<!-- .element: class="fragment" -->
 <aside class="notes"><p>v1 != v2 != v3, target changed to v4 (3/4 of the way through)<br></p>
-</aside></script></section><section  data-markdown><script type="text/template">
+</aside></script></section><section data-markdown><script type="text/template">
+
+### Other efforts
+
+<!-- .element: class="fragment" -->
+
+A refactoring  <span class="font-red">failure</span>.
+
+<!-- .element: class="fragment" -->
+
+No/few/expensive existing tests.
+
+<!-- .element: class="fragment" -->
+
+Too ambitious.
+
+<!-- .element: class="fragment" -->
+
+Not enough <span class="font-green">understanding</span>.
+
+<!-- .element: class="fragment" -->
+
+Smaller, incremental refactors throughout my programming career.
+
+<!-- .element: class="fragment" -->
+
+<aside class="notes"><p>3 points climbing rule</p>
+</aside></script></section></section><section  data-markdown><script type="text/template">
 
 > A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination.
 
 --Tom Stuart, Understanding Computation
-</script></section><section  data-markdown><script type="text/template">
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+## Emergence
+
+![https://dlc.dcccd.edu/biology1-1/emergent-properties](./assets/emergent_properties.jpg "WTF/m")
+
+<aside class="notes"><p>The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein</p>
+</aside></script></section><section data-markdown><script type="text/template">
 
 <!-- .element: class="fragment" -->
-Understand intent.
-<!-- .element: class="fragment" -->
-Understanding can be an emerging property of our work.
-<!-- .element: class="fragment" -->
-Understanding is an opportunity to refactor.
+
+Understanding is <span class="font-green">emergent</span>.
+
 <!-- .element: class="fragment" -->
 
-</script></section><section  data-markdown><script type="text/template">
+Understanding is an <span class="font-green">opportunity to refactor</span>.
+
+<!-- .element: class="fragment" -->
+
+</div>
+
+</script></section></section><section  data-markdown><script type="text/template">
 
 ## What is refactoring?
 
@@ -65,16 +114,19 @@ Understanding is an opportunity to refactor.
 
 <!-- .element: class="fragment" -->
 
+</script></section><section  data-markdown><script type="text/template">
+
 ## Why refactor
 
 > Programs that are hard to read are hard to modify.
 
 --Kent Beck
 
-> Loss of the structure of code has a cumulative effect. The harder it is to see the design in the code, the harder it is to preserver it, and the more rapidly it decays.
+> Loss of the structure of code has a cumulative effect. The harder it is to see the design in the code, the harder it is to preserve it, and the more rapidly it decays.
+
+--Martin Fowler, Refactoring
 
 <!-- .element: class="fragment" -->
---Martin Fowler, Refactoring
 </script></section><section  data-markdown><script type="text/template">
 
 > I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
@@ -97,38 +149,70 @@ Understanding is an opportunity to refactor.
 
 </script></section><section  data-markdown><script type="text/template">
 
-* Problem domain.
-* Solution domain.
-
-</script></section><section  data-markdown><script type="text/template">
-
-<!-- .element: class="fragment" -->
-
-> Functions should do one thing. They should do it well. They should do it only.
-
-<!-- .element: class="fragment" -->
-
-> Functions should either do something or answer something, but not both.
-
-<!-- .element: class="fragment" -->
-
-* Robert C. Martin, Clean Code
-
-</script></section><section  data-markdown><script type="text/template">
-
 > Master programmers think of systems as stories to be told rather than programs to be written.
 
 * Robert C. Martin, Clean Code
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section ><section data-markdown><script type="text/template">
 
-* Short.
-* One level of abstraction.
-* _n_ arguments <= 3 is best.
-* No side effects.
-  + Certainly not in business logic.
+## Functions
 
-</script></section><section  data-markdown><script type="text/template">
+* Naming
+* <span class="font-green">Pure</span> (avoid <span class="font-red">state</span>)  
+
+</script></section><section data-markdown><script type="text/template">
+
+### How to name functions
+
+Reveal intent
+
+<!-- .element: class="fragment" -->
+
+Nouns are for pure functions
+
+<!-- .element: class="fragment" -->
+
+Verbs are for functions with side-effects
+
+<!-- .element: class="fragment" -->
+
+Avoid disinformation
+
+<!-- .element: class="fragment" -->
+
+Avoid mental translation (cognitive load)
+
+<!-- .element: class="fragment" -->
+
+Consistency
+
+<!-- .element: class="fragment" -->
+
+<aside class="notes"><p>Consistency: within function, file, module, project, team -- in descending order of importance</p>
+</aside></script></section><section data-markdown><script type="text/template">
+
+### How to write functions
+
+Short
+<!-- .element: class="fragment" -->
+
+One level of abstraction
+<!-- .element: class="fragment" -->
+
+_n_ arguments: 3+ is candidate for refactor
+
+<!-- .element: class="fragment" -->
+
+No side effects
+
+<!-- .element: class="fragment" -->
+
+Okay fine, but certainly not in business logic
+
+<!-- .element: class="fragment" -->
+
+<aside class="notes"><p>Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it <em>only</em>. 2) Functions should either <em>do</em> something or <em>answer</em> something, but not both.</p>
+</aside></script></section></section><section  data-markdown><script type="text/template">
 
 > What if you were a doctor and had a patient who demanded that you stop all the silly hand-washing in preparation for surgery because it was taking too much time?
 
@@ -180,28 +264,19 @@ Legacy Code - testing.
 
 </script></section><section  data-markdown><script type="text/template">
 
+## Tests
+
 * Fast
 * Independent
 * Repeatable
+* Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 
-* [Uncle Bob explains why test "first"](https://www.youtube.com/watch?v=GvAzrC6-spQ)
+<aside class="notes"><p>The suite of code is there so we are not afraid of our code. --Uncle Bob</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 
-</script></section><section  data-markdown><script type="text/template">
-
-* Remove state.
-* Naming.
-  + Reveal intention.
-  + Nouns (pure) and verbs (side-effects).
-  + Avoid disinformation.
-  + Avoid mental translation.
-  + Avoid single-letter variables.
-  + Consistency.
-
-</script></section><section  data-markdown><script type="text/template">
+Thank you!
 
 ![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
-
-</script></section><section  data-markdown><script type="text/template">
 </script></section></div>
     </div>
 
