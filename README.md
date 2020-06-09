@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/golubitsky/present.svg?branch=master)](https://travis-ci.com/golubitsky/present)  
+[![Build Status](https://travis-ci.com/golubitsky/refactoring.svg?branch=master)](https://travis-ci.com/golubitsky/refactoring)  
 ([live](https://golubitsky.github.io/refactoring/))
 
 ### Develop
@@ -19,10 +19,10 @@ npm install
 
 ### Deploy
 
-* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the `master` branch.
+* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/refactoring) for the `master` branch.
 * Builds generate static content in `/docs` based on `slides.md` .
 * Travis CI pushes the `gh-pages` branch.
-* [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
+* [Github settings](https://github.com/golubitsky/refactoring/settings) are to build from `gh-pages` .
 
 ## Built using [reveal-md](https://github.com/webpro/reveal-md)
 
