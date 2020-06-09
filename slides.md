@@ -38,7 +38,7 @@ Resulting REST API service had <span class="font-green">800+ unit tests</span>
 Empowered team to <span class="font-green">deliver algorithm updates quickly</span>
 
 <!-- .element: class="fragment" -->
-Note: v1 != v2 != v3, target changed to v4 (3/4 of the way through)<br>
+Note: Used by sales, designers, reporting across all of Tesla Energy; v1 != v2 != v3, target changed to v4 (3/4 of the way through)
 
 <!--v-->
 
@@ -46,82 +46,84 @@ Note: v1 != v2 != v3, target changed to v4 (3/4 of the way through)<br>
 
 <!-- .element: class="fragment" -->
 
-A refactoring  <span class="font-red">failure</span>.
+A refactoring  <span class="font-red">failure</span>
 
 <!-- .element: class="fragment" -->
 
-No/few/expensive existing tests.
+No/few/expensive existing tests
 
 <!-- .element: class="fragment" -->
 
-Too ambitious.
+Too ambitious
 
 <!-- .element: class="fragment" -->
 
-Not enough <span class="font-green">understanding</span>.
+Not enough <span class="font-green">understanding</span>
 
 <!-- .element: class="fragment" -->
 
-Smaller, incremental refactors throughout my programming career.
+...smaller, incremental refactors
 
 <!-- .element: class="fragment" -->
 
 Note: 3 points climbing rule
 <!--s-->
 
-> A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination.
+<!--s-->
 
---Tom Stuart, Understanding Computation
+![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
+
+Notes: A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?
+
+<!--s-->
+
+Understanding is <span class="font-green">emergent</span>
 
 <!--s-->
 
 ## Emergence
 
-![https://dlc.dcccd.edu/biology1-1/emergent-properties](./assets/emergent_properties.jpg "WTF/m")
+![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
 
 Note: The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein
 
-<!--v-->
+<!--s-->
 
-<!-- .element: class="fragment" -->
+``` txt
+                 +------> Programming --------+
+                 |                            |
+                 |                            v
+Requirements --> Understanding    Understanding --> Software
+                 ^                            |
+                 |                            |
+                 |                            |
+                 +------- Refactoring <-------+
+```
 
-Understanding is <span class="font-green">emergent</span>.
-
-<!-- .element: class="fragment" -->
-
-Understanding is an <span class="font-green">opportunity to refactor</span>.
-
-<!-- .element: class="fragment" -->
-
-</div>
-
+Understanding is an <span class="font-green">emergent opportunity to refactor</span>
 <!--s-->
 
 ## What is refactoring?
 
-<!-- .element: class="fragment" -->
+> The process of restructuring existing computer code **without changing its external behavior**
 
-> The purpose of refactoring is to make the software easier to understand and modify.
-
-<!-- .element: class="fragment" -->
-
-> Refactoring does not change the observable behavior of the software.
-
-<!-- .element: class="fragment" -->
+--Wikipedia
 
 <!--s-->
 
-## Why refactor
+## Why refactor?
 
 > Programs that are hard to read are hard to modify.
 
 --Kent Beck
 
+<!--v-->
+
 > Loss of the structure of code has a cumulative effect. The harder it is to see the design in the code, the harder it is to preserve it, and the more rapidly it decays.
 
 --Martin Fowler, Refactoring
 
-<!-- .element: class="fragment" -->
+Notes: **Fowler:** The purpose of refactoring is to make the software easier to understand and modify.
 <!--s-->
 
 > I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
