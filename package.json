@@ -1,7 +1,7 @@
 {
-  "name": "present",
+  "name": "refactor",
   "version": "1.0.0",
-  "description": "* Live: https://golubitsky.github.io/present/",
+  "description": "* Live: https://golubitsky.github.io/refactor/",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/golubitsky/present.git"
+    "url": "git+https://github.com/golubitsky/refactor.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/golubitsky/present/issues"
+    "url": "https://github.com/golubitsky/refactor/issues"
   },
-  "homepage": "https://github.com/golubitsky/present#readme"
+  "homepage": "https://github.com/golubitsky/refactor#readme"
 }
