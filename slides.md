@@ -80,46 +80,13 @@ Note: 3 points climbing rule
 
 <!--s-->
 
-![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
-
-Notes: A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?
-
-<!--s-->
-
-Understanding is <span class="font-green">emergent</span>
-
-<!--s-->
-
-## Emergence
-
-![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
-
-Note: The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein
-
-<!--s-->
-
-``` text
-                 +------> Programming --------+
-                 |                            |
-                 |                            v
-Requirements --> Understanding    Understanding --> Software
-                 ^                            |
-                 |                            |
-                 |                            |
-                 +------- Refactoring <-------+
-```
-
-Understanding is an <span class="font-green">emergent opportunity to refactor</span>
-
-<!--s-->
-
 ## What is refactoring?
 
 > The process of restructuring existing computer code **without changing its external behavior**
 
 --Wikipedia
 
-<!--s-->
+<!--v-->
 
 <span class="font-red">Not</span> refactoring:
 
@@ -132,8 +99,8 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 ## Why refactor?
 
 <div class="fragment">We often need to change <i>soft</i>ware</div>
-<div class="fragment">Requirements change (we're human)</div>
-<div class="fragment font-green">Change should be inexpensive</div>
+<div class="fragment">Requirements change</div>
+<div class="fragment">We can't make sense of how to add new features or to fix bugs</div>
 
 <!--v-->
 
@@ -151,6 +118,57 @@ Notes: **Fowler:** The purpose of refactoring is to make the software easier to 
 
 <!--s-->
 
+## Prerequisites
+
+<!--s-->
+
+### <div class="font-green">Understanding</div>
+
+<!--v-->
+
+![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
+
+Notes: A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?
+
+<!--v-->
+
+Understanding is <span class="font-green">emergent</span>
+
+<!--v-->
+
+### Emergence
+
+![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
+
+Note: The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein
+
+<!--v-->
+
+``` text
+                 +------> Programming --------+
+                 |                            |
+                 |                            v
+Requirements --> Understanding    Understanding --> Software
+                 ^                            |
+                 |                            |
+                 |                            |
+                 +------- Refactoring <-------+
+```
+
+Understanding is an <span class="font-green">emergent opportunity to refactor</span>
+
+<!--v-->
+
+> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+
+--Martin Fowler, Refactoring
+
+<!--s-->
+
+### <div class="font-green">Tests</div>
+
+<!--v-->
+
 > Preserving existing behavior is one of the largest challenges in software development.
 
 > Legacy code is simply code without tests.
@@ -159,23 +177,16 @@ Notes: **Fowler:** The purpose of refactoring is to make the software easier to 
 
 <!--v-->
 
-> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
+## How to write tests
 
---Martin Fowler, Refactoring
-
-<!--s-->
-
-## Tests
-
-* Feedback re: nothing is broken  
-* Fast
+* Fast (feedback)
 * Independent (from one another)
 * Repeatable (not flaky)
 * Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 
-Note: The suite of code is there so we are not afraid of our code. --Uncle Bob
+Note: The suite of tests is there so we are not afraid of our code. --Uncle Bob
 
-<!--s-->
+<!--v-->
 
 > What if you were a doctor and had a patient who demanded that you stop all the silly hand-washing in preparation for surgery because it was taking too much time?
 
@@ -183,7 +194,7 @@ Note: The suite of code is there so we are not afraid of our code. --Uncle Bob
 
 <!--s-->
 
-### Some practical tips
+## Refactoring tips
 
 <!--s-->
 
@@ -226,24 +237,9 @@ Note: Uncle Bob: 1) Functions should do one thing. They should do it well. They 
 
 <!--s-->
 
-> ... you find it hard to make changes your users want. This is where refactoring comes in.
+> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
 --Martin Fowler, Refactoring
-
-<!--s-->
-
-## Single responsibility principle
-
-> A class or module should have one, and only one, reason to change.
-
---Robert C. Martin, Clean Code
-
-<!--s-->
-
-* Run the tests.
-* No duplication.
-* Expresses intent.
-* Minimizes amount of code.
 
 <!--s-->
 
@@ -266,12 +262,6 @@ Note: redundant, out of sync, opportunity to refactor
 Thank you!
 
 ![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
-
-<!--v-->
-
-> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
-
---Martin Fowler, Refactoring
 
 <!--v-->
 

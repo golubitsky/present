@@ -24,7 +24,7 @@ npm install
 * Travis CI pushes the `gh-pages` branch.
 * [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
 
-## Based on [reveal-md](https://github.com/webpro/reveal-md)
+## Built using [reveal-md](https://github.com/webpro/reveal-md)
 
 ### Notes on the framework
 

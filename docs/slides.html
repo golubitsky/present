@@ -82,38 +82,7 @@ Not enough <span class="font-green">understanding</span>
 <!-- .element: class="fragment" -->
 
 <aside class="notes"><p>3 points climbing rule</p>
-</aside></script></section></section><section  data-markdown><script type="text/template">
-
-![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
-
-<aside class="notes"><p>A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer&#39;s imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?</p>
-</aside></script></section><section  data-markdown><script type="text/template">
-
-Understanding is <span class="font-green">emergent</span>
-
-</script></section><section  data-markdown><script type="text/template">
-
-## Emergence
-
-![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
-
-<aside class="notes"><p>The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein</p>
-</aside></script></section><section  data-markdown><script type="text/template">
-
-``` text
-                 +------> Programming --------+
-                 |                            |
-                 |                            v
-Requirements --> Understanding    Understanding --> Software
-                 ^                            |
-                 |                            |
-                 |                            |
-                 +------- Refactoring <-------+
-```
-
-Understanding is an <span class="font-green">emergent opportunity to refactor</span>
-
-</script></section><section  data-markdown><script type="text/template">
+</aside></script></section></section><section ><section data-markdown><script type="text/template">
 
 ## What is refactoring?
 
@@ -121,7 +90,7 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 --Wikipedia
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 
 <span class="font-red">Not</span> refactoring:
 
@@ -129,13 +98,13 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 <div class="fragment">Fixing bugs</div>
 <div class="fragment">Optimization</div>
 
-</script></section><section ><section data-markdown><script type="text/template">
+</script></section></section><section ><section data-markdown><script type="text/template">
 
 ## Why refactor?
 
 <div class="fragment">We often need to change <i>soft</i>ware</div>
-<div class="fragment">Requirements change (we're human)</div>
-<div class="fragment font-green">Change should be inexpensive</div>
+<div class="fragment">Requirements change</div>
+<div class="fragment">We can't make sense of how to add new features or to fix bugs</div>
 
 </script></section><section data-markdown><script type="text/template">
 
@@ -150,7 +119,56 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 --Martin Fowler, Refactoring
 
 <aside class="notes"><p><strong>Fowler:</strong> The purpose of refactoring is to make the software easier to understand and modify.</p>
-</aside></script></section></section><section ><section data-markdown><script type="text/template">
+</aside></script></section></section><section  data-markdown><script type="text/template">
+
+## Prerequisites
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+### <div class="font-green">Understanding</div>
+
+</script></section><section data-markdown><script type="text/template">
+
+![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
+
+<aside class="notes"><p>A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer&#39;s imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?</p>
+</aside></script></section><section data-markdown><script type="text/template">
+
+Understanding is <span class="font-green">emergent</span>
+
+</script></section><section data-markdown><script type="text/template">
+
+### Emergence
+
+![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
+
+<aside class="notes"><p>The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein</p>
+</aside></script></section><section data-markdown><script type="text/template">
+
+``` text
+                 +------> Programming --------+
+                 |                            |
+                 |                            v
+Requirements --> Understanding    Understanding --> Software
+                 ^                            |
+                 |                            |
+                 |                            |
+                 +------- Refactoring <-------+
+```
+
+Understanding is an <span class="font-green">emergent opportunity to refactor</span>
+
+</script></section><section data-markdown><script type="text/template">
+
+> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+
+--Martin Fowler, Refactoring
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+
+### <div class="font-green">Tests</div>
+
+</script></section><section data-markdown><script type="text/template">
 
 > Preserving existing behavior is one of the largest challenges in software development.
 
@@ -160,30 +178,23 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 </script></section><section data-markdown><script type="text/template">
 
-> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
+## How to write tests
 
---Martin Fowler, Refactoring
-
-</script></section></section><section  data-markdown><script type="text/template">
-
-## Tests
-
-* Feedback re: nothing is broken  
-* Fast
+* Fast (feedback)
 * Independent (from one another)
 * Repeatable (not flaky)
 * Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 
-<aside class="notes"><p>The suite of code is there so we are not afraid of our code. --Uncle Bob</p>
-</aside></script></section><section  data-markdown><script type="text/template">
+<aside class="notes"><p>The suite of tests is there so we are not afraid of our code. --Uncle Bob</p>
+</aside></script></section><section data-markdown><script type="text/template">
 
 > What if you were a doctor and had a patient who demanded that you stop all the silly hand-washing in preparation for surgery because it was taking too much time?
 
 --Robert C. Martin, Clean Code
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section></section><section  data-markdown><script type="text/template">
 
-### Some practical tips
+## Refactoring tips
 
 </script></section><section  data-markdown><script type="text/template">
 
@@ -224,24 +235,9 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 <aside class="notes"><p>Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it <em>only</em>. 2) Functions should either <em>do</em> something or <em>answer</em> something, but not both.</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 
-> ... you find it hard to make changes your users want. This is where refactoring comes in.
+> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
 --Martin Fowler, Refactoring
-
-</script></section><section  data-markdown><script type="text/template">
-
-## Single responsibility principle
-
-> A class or module should have one, and only one, reason to change.
-
---Robert C. Martin, Clean Code
-
-</script></section><section  data-markdown><script type="text/template">
-
-* Run the tests.
-* No duplication.
-* Expresses intent.
-* Minimizes amount of code.
 
 </script></section><section  data-markdown><script type="text/template">
 
@@ -263,12 +259,6 @@ announcement.event.gold.source.attribute['source_system_code']
 Thank you!
 
 ![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
-
-</script></section><section data-markdown><script type="text/template">
-
-> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
-
---Martin Fowler, Refactoring
 
 </script></section><section data-markdown><script type="text/template">
 
