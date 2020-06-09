@@ -77,7 +77,6 @@ Not enough <span class="font-green">understanding</span>
 <!-- .element: class="fragment" -->
 
 Note: 3 points climbing rule
-<!--s-->
 
 <!--s-->
 
@@ -111,6 +110,7 @@ Requirements --> Understanding    Understanding --> Software
 ```
 
 Understanding is an <span class="font-green">emergent opportunity to refactor</span>
+
 <!--s-->
 
 ## What is refactoring?
@@ -121,7 +121,21 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 <!--s-->
 
+<span class="font-red">Not</span> refactoring:
+
+<div class="fragment">New features</div>
+<div class="fragment">Fixing bugs</div>
+<div class="fragment">Optimization</div>
+
+<!--s-->
+
 ## Why refactor?
+
+<div class="fragment">We often need to change <i>soft</i>ware</div>
+<div class="fragment">Requirements change (we're human)</div>
+<div class="fragment font-green">Change should be inexpensive</div>
+
+<!--v-->
 
 > Programs that are hard to read are hard to modify.
 
@@ -134,7 +148,16 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 --Martin Fowler, Refactoring
 
 Notes: **Fowler:** The purpose of refactoring is to make the software easier to understand and modify.
+
 <!--s-->
+
+> Preserving existing behavior is one of the largest challenges in software development.
+
+> Legacy code is simply code without tests.
+
+--Michael Feathers, Working Effectively With Legacy Code
+
+<!--v-->
 
 > I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
@@ -142,17 +165,25 @@ Notes: **Fowler:** The purpose of refactoring is to make the software easier to 
 
 <!--s-->
 
-> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+## Tests
 
---Martin Fowler, Refactoring
+* Feedback re: nothing is broken  
+* Fast
+* Independent (from one another)
+* Repeatable (not flaky)
+* Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
+
+Note: The suite of code is there so we are not afraid of our code. --Uncle Bob
 
 <!--s-->
 
-## Always Be Refactoring
+> What if you were a doctor and had a patient who demanded that you stop all the silly hand-washing in preparation for surgery because it was taking too much time?
 
-> Refactoring is not an activity you set aside time to do. Refactoring is something you do all the time in little bursts. You don't decide to refactor, you refactor because you want to do something else, and refactoring helps you do that other thing.
+--Robert C. Martin, Clean Code
 
---Martin Fowler, Refactoring
+<!--s-->
+
+### Some practical tips
 
 <!--s-->
 
@@ -167,72 +198,31 @@ Notes: **Fowler:** The purpose of refactoring is to make the software easier to 
 * Naming
 * <span class="font-green">Pure</span> (avoid <span class="font-red">state</span>)  
 
-<!--v-->
+<!--s-->
 
 ### How to name functions
 
-Reveal intent
+<div class="fragment">Reveal intent</div>
+<div class="fragment">Nouns are for pure functions</div>
+<div class="fragment">Verbs are for functions with side-effects</div>
+<div class="fragment">Avoid disinformation</div>
+<div class="fragment">Avoid mental translation</div>
+<div class="fragment">Consistency</div>
 
-<!-- .element: class="fragment" -->
+Notes: Consistency: within function, file, module, project, team, company -- in descending order of importance
 
-Nouns are for pure functions
-
-<!-- .element: class="fragment" -->
-
-Verbs are for functions with side-effects
-
-<!-- .element: class="fragment" -->
-
-Avoid disinformation
-
-<!-- .element: class="fragment" -->
-
-Avoid mental translation (cognitive load)
-
-<!-- .element: class="fragment" -->
-
-Consistency
-
-<!-- .element: class="fragment" -->
-
-Notes: Consistency: within function, file, module, project, team -- in descending order of importance
-
-<!--v-->
+<!--s-->
 
 ### How to write functions
 
-Short
-<!-- .element: class="fragment" -->
-
-One level of abstraction
-<!-- .element: class="fragment" -->
-
-_n_ arguments: 3+ is candidate for refactor
-
-<!-- .element: class="fragment" -->
-
-No side effects
-
-<!-- .element: class="fragment" -->
-
-Okay fine, but certainly not in business logic
-
-<!-- .element: class="fragment" -->
+<div class="fragment">Short</div>
+<div class="fragment">One level of abstraction</div>
+<div class="fragment">Low cognitive load</div>
+<div class="fragment">Low <i>n</i> arguments</div>
+<div class="fragment">No side effects!</div>
+<div class="fragment">Okay fine, but certainly not in business logic</div>
 
 Note: Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it _only_. 2) Functions should either _do_ something or _answer_ something, but not both.
-<!--s-->
-
-> What if you were a doctor and had a patient who demanded that you stop all the silly hand-washing in preparation for surgery because it was taking too much time?
-
---Robert C. Martin, Clean Code
-
-<!--s-->
-
-> The proper use of comments is to compensate for our failure to express ourself in code.
-
-* Robert C. Martin, Clean Code
-
-Note: redundant, out of sync, opportunity to refactor
 
 <!--s-->
 
@@ -257,32 +247,34 @@ Note: redundant, out of sync, opportunity to refactor
 
 <!--s-->
 
-* Law of Demeter (for OOP)
+## Law of Demeter (for OOP)
 
 ``` ruby
 announcement.event.gold.source.attribute['source_system_code']
 ```
 
-* Opportunity for refactoring.
-
 <!--s-->
 
-Legacy Code - testing.
+> The proper use of comments is to compensate for our failure to express ourself in code.
 
---Michael Feathers, Working Effectively With Legacy Code
+* Robert C. Martin, Clean Code
 
-<!--s-->
+Note: redundant, out of sync, opportunity to refactor
 
-## Tests
-
-* Fast
-* Independent
-* Repeatable
-* Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
-
-Note: The suite of code is there so we are not afraid of our code. --Uncle Bob
 <!--s-->
 
 Thank you!
 
 ![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
+
+<!--v-->
+
+> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+
+--Martin Fowler, Refactoring
+
+<!--v-->
+
+> Refactoring is not an activity you set aside time to do. Refactoring is something you do all the time in little bursts. You don't decide to refactor, you refactor because you want to do something else, and refactoring helps you do that other thing.
+
+--Martin Fowler, Refactoring
