@@ -1,15 +1,7 @@
-[![Build Status](https://travis-ci.com/golubitsky/present.svg?branch=master)](https://travis-ci.com/golubitsky/present)
+[![Build Status](https://travis-ci.com/golubitsky/present.svg?branch=master)](https://travis-ci.com/golubitsky/present)  
+([live](https://golubitsky.github.io/present/))
 
-* Live: https://golubitsky.github.io/present/
-
-## Deploy
-
-* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the `master` branch.
-* Builds generate static content in `/docs` based on `slides.md` .
-* Travis CI pushes the `gh-pages` branch.
-* [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
-
-## Develop
+### Develop
 
 1. Install dependencies
 
@@ -25,9 +17,16 @@ npm install
 
 3. Reload `docs/index.html` 
 
-* Can't get `--watch` to work.
+### Deploy
 
-## Notes on the framework
+* Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/present) for the `master` branch.
+* Builds generate static content in `/docs` based on `slides.md` .
+* Travis CI pushes the `gh-pages` branch.
+* [Github settings](https://github.com/golubitsky/present/settings) are to build from `gh-pages` .
+
+## Based on [reveal-md](https://github.com/webpro/reveal-md)
+
+### Notes on the framework
 
 * Speaker notes: https://github.com/webpro/reveal-md/#speaker-notes
   + Start with `Note:` -- at the _end_ of a slide.
@@ -37,6 +36,7 @@ npm install
   + surround with: `<!-- .element: class="fragment" -->` 
 * Available themes: https://github.com/hakimel/reveal.js/tree/master/css/theme/source
 
-## Based On
+### Bugs with the framework
 
-* [reveal-md](https://github.com/webpro/reveal-md)
+* Can't get `--css styles.css` to work in Github Pages (works locally). Workaround: `<styles>` tag in `slides.md` .
+* Can't get `--watch` to work.
