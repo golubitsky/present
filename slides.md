@@ -9,6 +9,16 @@ revealOptions:
 
 ---
 
+<style>
+.font-red {
+  color: red; 
+}
+
+.font-green {
+  color: green; 
+}
+</style>
+
 # <span class="font-green">Refactoring</span>
 
 Mikhail Golubitsky  
@@ -89,7 +99,7 @@ Note: The arising of novel and coherent structures, patterns and properties duri
 
 <!--s-->
 
-``` txt
+``` text
                  +------> Programming --------+
                  |                            |
                  |                            v
