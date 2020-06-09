@@ -31,6 +31,18 @@ Mikhail Golubitsky
 Atlantis Technology  
 June 2020  
 
+</script></section><section  data-markdown><script type="text/template">
+
+## Topics
+
+What is refactoring?
+
+Why refactor?
+
+Prerequisites for refactoring
+
+Refactoring tips
+
 </script></section><section ><section data-markdown><script type="text/template">
 
 ## Refactoring Résumé
@@ -59,27 +71,11 @@ Empowered team to <span class="font-green">deliver algorithm updates quickly</sp
 
 ### Other efforts
 
-<!-- .element: class="fragment" -->
-
-A refactoring  <span class="font-red">failure</span>
-
-<!-- .element: class="fragment" -->
-
-No/few/expensive existing tests
-
-<!-- .element: class="fragment" -->
-
-Too ambitious
-
-<!-- .element: class="fragment" -->
-
-Not enough <span class="font-green">understanding</span>
-
-<!-- .element: class="fragment" -->
-
-...smaller, incremental refactors
-
-<!-- .element: class="fragment" -->
+<div class="fragment">A refactoring  <span class="font-red">failure</span></div>
+<div class="fragment">No/few/expensive existing tests</div>
+<div class="fragment">Too ambitious</div>
+<div class="fragment">Not enough <span class="font-green">understanding</span></div>
+<div class="fragment">...smaller, incremental refactors</div>
 
 <aside class="notes"><p>3 points climbing rule</p>
 </aside></script></section></section><section ><section data-markdown><script type="text/template">
@@ -102,10 +98,6 @@ Not enough <span class="font-green">understanding</span>
 
 ## Why refactor?
 
-<div class="fragment">We often need to change <i>soft</i>ware</div>
-<div class="fragment">Requirements change</div>
-<div class="fragment">We can't make sense of how to add new features or to fix bugs</div>
-
 </script></section><section data-markdown><script type="text/template">
 
 > Programs that are hard to read are hard to modify.
@@ -114,33 +106,43 @@ Not enough <span class="font-green">understanding</span>
 
 </script></section><section data-markdown><script type="text/template">
 
+## Why refactor?
+
+<div class="fragment"><span class="font-green">Requirements change</span></div>
+<div class="fragment"><span class="font-green">Understanding emerges</span> during programming</div>
+<div class="fragment"><span class="font-red">Can't reason</span> about the program</div>
+
+</script></section><section data-markdown><script type="text/template">
+
 > Loss of the structure of code has a cumulative effect. The harder it is to see the design in the code, the harder it is to preserve it, and the more rapidly it decays.
 
 --Martin Fowler, Refactoring
 
 <aside class="notes"><p><strong>Fowler:</strong> The purpose of refactoring is to make the software easier to understand and modify.</p>
-</aside></script></section></section><section  data-markdown><script type="text/template">
+</aside></script></section></section><section ><section data-markdown><script type="text/template">
 
-## Prerequisites
+## Prerequisites for refactoring
 
-</script></section><section ><section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 
 ### <div class="font-green">Understanding</div>
 
 </script></section><section data-markdown><script type="text/template">
 
-![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
+> A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination.
 
-<aside class="notes"><p>A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer&#39;s imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?</p>
+--Tom Stuart, Understanding Computation
+
+<aside class="notes"><p>There is a more ideal representation (program) of an idea.</p>
 </aside></script></section><section data-markdown><script type="text/template">
 
 Understanding is <span class="font-green">emergent</span>
 
 </script></section><section data-markdown><script type="text/template">
 
-### Emergence
-
 ![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
+
+<span class="font-green">Emergence</span>
 
 <aside class="notes"><p>The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein</p>
 </aside></script></section><section data-markdown><script type="text/template">
@@ -164,7 +166,7 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 --Martin Fowler, Refactoring
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 
 ### <div class="font-green">Tests</div>
 
@@ -178,12 +180,12 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 </script></section><section data-markdown><script type="text/template">
 
-## How to write tests
+#### Good tests are
 
+* Written first! ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 * Fast (feedback)
 * Independent (from one another)
 * Repeatable (not flaky)
-* Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 
 <aside class="notes"><p>The suite of tests is there so we are not afraid of our code. --Uncle Bob</p>
 </aside></script></section><section data-markdown><script type="text/template">
@@ -192,38 +194,49 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 --Robert C. Martin, Clean Code
 
-</script></section></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
+
+#### The Virtuous Cycle
+
+TODO: graphic to show testing, understanding, programming
+
+</script></section></section><section ><section data-markdown><script type="text/template">
 
 ## Refactoring tips
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 
-> Master programmers think of systems as stories to be told rather than programs to be written.
-
-* Robert C. Martin, Clean Code
-
-</script></section><section  data-markdown><script type="text/template">
-
-## Functions
+### Functions
 
 * Naming
 * <span class="font-green">Pure</span> (avoid <span class="font-red">state</span>)  
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 
-### How to name functions
+#### Pure Functions
 
-<div class="fragment">Reveal intent</div>
-<div class="fragment">Nouns are for pure functions</div>
+<div class="fragment">Operate only on their arguments</div>
+<div class="fragment font-green">Deterministic</div>
+<div class="fragment font-green">Simple to reason about</div>
+<div class="fragment font-green">Simple to test</div>
+<div class="fragment font-green">Simple to maintain</div>
+<div class="fragment">Business logic should be pure</div>
+
+</script></section><section data-markdown><script type="text/template">
+
+#### How to name functions
+
+<div class="fragment">Reveal <span class="font-green">intent</span></div>
+<div class="fragment">Nouns are for <span class="font-green">pure functions</span></div>
 <div class="fragment">Verbs are for functions with side-effects</div>
-<div class="fragment">Avoid disinformation</div>
-<div class="fragment">Avoid mental translation</div>
-<div class="fragment">Consistency</div>
+<div class="fragment">Avoid <span class="font-red">disinformation</span></div>
+<div class="fragment">Avoid <span class="font-red">mental translation</span></div>
+<div class="fragment font-green">Consistency</div>
 
 <aside class="notes"><p>Consistency: within function, file, module, project, team, company -- in descending order of importance</p>
-</aside></script></section><section  data-markdown><script type="text/template">
+</aside></script></section><section data-markdown><script type="text/template">
 
-### How to write functions
+#### How to write functions
 
 <div class="fragment">Short</div>
 <div class="fragment">One level of abstraction</div>
@@ -233,21 +246,29 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 <div class="fragment">Okay fine, but certainly not in business logic</div>
 
 <aside class="notes"><p>Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it <em>only</em>. 2) Functions should either <em>do</em> something or <em>answer</em> something, but not both.</p>
-</aside></script></section><section  data-markdown><script type="text/template">
+</aside></script></section><section data-markdown><script type="text/template">
 
 > I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
 --Martin Fowler, Refactoring
 
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 
-## Law of Demeter (for OOP)
+> Master programmers think of systems as stories to be told rather than programs to be written.
+
+--Robert C. Martin, Clean Code
+
+</script></section></section><section  data-markdown><script type="text/template">
+
+#### Law of Demeter (for OOP)
 
 ``` ruby
 announcement.event.gold.source.attribute['source_system_code']
 ```
 
 </script></section><section  data-markdown><script type="text/template">
+
+#### Comments
 
 > The proper use of comments is to compensate for our failure to express ourself in code.
 

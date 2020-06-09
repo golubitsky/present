@@ -27,6 +27,18 @@ June 2020
 
 <!--s-->
 
+## Topics
+
+What is refactoring?
+
+Why refactor?
+
+Prerequisites for refactoring
+
+Refactoring tips
+
+<!--s-->
+
 ## Refactoring Résumé
 
 <!--v-->
@@ -54,27 +66,11 @@ Note: Used by sales, designers, reporting across all of Tesla Energy; v1 != v2 !
 
 ### Other efforts
 
-<!-- .element: class="fragment" -->
-
-A refactoring  <span class="font-red">failure</span>
-
-<!-- .element: class="fragment" -->
-
-No/few/expensive existing tests
-
-<!-- .element: class="fragment" -->
-
-Too ambitious
-
-<!-- .element: class="fragment" -->
-
-Not enough <span class="font-green">understanding</span>
-
-<!-- .element: class="fragment" -->
-
-...smaller, incremental refactors
-
-<!-- .element: class="fragment" -->
+<div class="fragment">A refactoring  <span class="font-red">failure</span></div>
+<div class="fragment">No/few/expensive existing tests</div>
+<div class="fragment">Too ambitious</div>
+<div class="fragment">Not enough <span class="font-green">understanding</span></div>
+<div class="fragment">...smaller, incremental refactors</div>
 
 Note: 3 points climbing rule
 
@@ -98,15 +94,19 @@ Note: 3 points climbing rule
 
 ## Why refactor?
 
-<div class="fragment">We often need to change <i>soft</i>ware</div>
-<div class="fragment">Requirements change</div>
-<div class="fragment">We can't make sense of how to add new features or to fix bugs</div>
-
 <!--v-->
 
 > Programs that are hard to read are hard to modify.
 
 --Kent Beck
+
+<!--v-->
+
+## Why refactor?
+
+<div class="fragment"><span class="font-green">Requirements change</span></div>
+<div class="fragment"><span class="font-green">Understanding emerges</span> during programming</div>
+<div class="fragment"><span class="font-red">Can't reason</span> about the program</div>
 
 <!--v-->
 
@@ -118,17 +118,19 @@ Notes: **Fowler:** The purpose of refactoring is to make the software easier to 
 
 <!--s-->
 
-## Prerequisites
+## Prerequisites for refactoring
 
-<!--s-->
+<!--v-->
 
 ### <div class="font-green">Understanding</div>
 
 <!--v-->
 
-![https://www.thoughtco.com/the-allegory-of-the-cave-120330](./assets/allegory_of_the_cave.png "Plato's Cave")
+> A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination.
 
-Notes: A program is a frozen representation of an idea, a snapshot of a structure that once existed in a programmer's imagination. --Tom Stuart, Understanding Computation; Is there an ideal representation (program) of an idea?
+--Tom Stuart, Understanding Computation
+
+Notes: There is a more ideal representation (program) of an idea.
 
 <!--v-->
 
@@ -136,9 +138,9 @@ Understanding is <span class="font-green">emergent</span>
 
 <!--v-->
 
-### Emergence
-
 ![https://study.com/academy/lesson/emergent-properties-definition-examples.html](./assets/emergentprps.png "Emergent Properties")
+
+<span class="font-green">Emergence</span>
 
 Note: The arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems --Jeffrey Goldstein
 
@@ -163,7 +165,7 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 --Martin Fowler, Refactoring
 
-<!--s-->
+<!--v-->
 
 ### <div class="font-green">Tests</div>
 
@@ -177,12 +179,12 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 <!--v-->
 
-## How to write tests
+#### Good tests are
 
+* Written first! ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 * Fast (feedback)
 * Independent (from one another)
 * Repeatable (not flaky)
-* Written <span class="font-green">first</span> ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 
 Note: The suite of tests is there so we are not afraid of our code. --Uncle Bob
 
@@ -192,39 +194,50 @@ Note: The suite of tests is there so we are not afraid of our code. --Uncle Bob
 
 --Robert C. Martin, Clean Code
 
+<!--v-->
+
+#### The Virtuous Cycle
+
+TODO: graphic to show testing, understanding, programming
+
 <!--s-->
 
 ## Refactoring tips
 
-<!--s-->
+<!--v-->
 
-> Master programmers think of systems as stories to be told rather than programs to be written.
-
-* Robert C. Martin, Clean Code
-
-<!--s-->
-
-## Functions
+### Functions
 
 * Naming
 * <span class="font-green">Pure</span> (avoid <span class="font-red">state</span>)  
 
-<!--s-->
+<!--v-->
 
-### How to name functions
+#### Pure Functions
 
-<div class="fragment">Reveal intent</div>
-<div class="fragment">Nouns are for pure functions</div>
+<div class="fragment">Operate only on their arguments</div>
+<div class="fragment font-green">Deterministic</div>
+<div class="fragment font-green">Simple to reason about</div>
+<div class="fragment font-green">Simple to test</div>
+<div class="fragment font-green">Simple to maintain</div>
+<div class="fragment">Business logic should be pure</div>
+
+<!--v-->
+
+#### How to name functions
+
+<div class="fragment">Reveal <span class="font-green">intent</span></div>
+<div class="fragment">Nouns are for <span class="font-green">pure functions</span></div>
 <div class="fragment">Verbs are for functions with side-effects</div>
-<div class="fragment">Avoid disinformation</div>
-<div class="fragment">Avoid mental translation</div>
-<div class="fragment">Consistency</div>
+<div class="fragment">Avoid <span class="font-red">disinformation</span></div>
+<div class="fragment">Avoid <span class="font-red">mental translation</span></div>
+<div class="fragment font-green">Consistency</div>
 
 Notes: Consistency: within function, file, module, project, team, company -- in descending order of importance
 
-<!--s-->
+<!--v-->
 
-### How to write functions
+#### How to write functions
 
 <div class="fragment">Short</div>
 <div class="fragment">One level of abstraction</div>
@@ -235,21 +248,29 @@ Notes: Consistency: within function, file, module, project, team, company -- in 
 
 Note: Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it _only_. 2) Functions should either _do_ something or _answer_ something, but not both.
 
-<!--s-->
+<!--v-->
 
 > I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
 --Martin Fowler, Refactoring
 
+<!--v-->
+
+> Master programmers think of systems as stories to be told rather than programs to be written.
+
+--Robert C. Martin, Clean Code
+
 <!--s-->
 
-## Law of Demeter (for OOP)
+#### Law of Demeter (for OOP)
 
 ``` ruby
 announcement.event.gold.source.attribute['source_system_code']
 ```
 
 <!--s-->
+
+#### Comments
 
 > The proper use of comments is to compensate for our failure to express ourself in code.
 
