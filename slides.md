@@ -67,10 +67,11 @@ Note: Used by sales, designers, reporting across all of Tesla Energy; v1 != v2 !
 ### Other efforts
 
 <div class="fragment">A refactoring  <span class="font-red">failure</span></div>
-<div class="fragment">No/few/expensive existing tests</div>
+<div class="fragment">Not enough understanding</div>
+<div class="fragment">Tests were too few and too slow</div>
+<div class="fragment">Infrequent releases</div>
 <div class="fragment">Too ambitious</div>
-<div class="fragment">Not enough <span class="font-green">understanding</span></div>
-<div class="fragment">...smaller, incremental refactors</div>
+<div class="fragment font-green">...smaller, incremental refactors</div>
 
 Note: 3 points climbing rule
 
@@ -204,16 +205,19 @@ TODO: graphic to show testing, understanding, programming
 
 ## Refactoring tips
 
-<!--v-->
-
-### Functions
-
-* Naming
-* <span class="font-green">Pure</span> (avoid <span class="font-red">state</span>)  
+<div class="fragment">Good news, I only have a couple!</div>
 
 <!--v-->
 
-#### Pure Functions
+<div class="fragment">Write <span class="font-green">pure functions</span></div>
+<div class="fragment">Name your functions well</div>
+<div class="fragment">
+Avoid <span class="font-red">state</span> and <span class="font-red">side effects</span>
+</div>
+
+<!--v-->
+
+#### What are pure functions?
 
 <div class="fragment">Operate only on their arguments</div>
 <div class="fragment font-green">Deterministic</div>
@@ -256,36 +260,11 @@ Note: Uncle Bob: 1) Functions should do one thing. They should do it well. They 
 
 <!--v-->
 
-> Master programmers think of systems as stories to be told rather than programs to be written.
+> Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 
---Robert C. Martin, Clean Code
-
-<!--s-->
-
-#### Law of Demeter (for OOP)
-
-``` ruby
-announcement.event.gold.source.attribute['source_system_code']
-```
+--Antoine de Saint-Exupery
 
 <!--s-->
-
-#### Comments
-
-> The proper use of comments is to compensate for our failure to express ourself in code.
-
-* Robert C. Martin, Clean Code
-
-Note: redundant, out of sync, opportunity to refactor
-
-<!--s-->
-
-Thank you!
+<div class="font-green">Thank you!</div>
 
 ![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
-
-<!--v-->
-
-> Refactoring is not an activity you set aside time to do. Refactoring is something you do all the time in little bursts. You don't decide to refactor, you refactor because you want to do something else, and refactoring helps you do that other thing.
-
---Martin Fowler, Refactoring
