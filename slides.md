@@ -27,7 +27,7 @@ June 2020
 
 <!--s-->
 
-## Topics
+## <div class="font-green">Topics</div>
 
 What is refactoring?
 
@@ -39,11 +39,11 @@ Refactoring tips
 
 <!--s-->
 
-## Refactoring Résumé
+## <div class="font-green">Refactoring Résumé</div>
 
 <!--v-->
 
-### Energy Production API
+### <div class="font-green">Energy Production API</div>
 
 Extracted 3 <span class="font-red">copied-and-pasted</span> and <span class="font-red">untested</span> instances of an energy production algorithm
 
@@ -64,7 +64,7 @@ Note: Used by sales, designers, reporting across all of Tesla Energy; v1 != v2 !
 
 <!--v-->
 
-### Other efforts
+### <div class="font-green">Other efforts</div>
 
 <div class="fragment">A refactoring  <span class="font-red">failure</span></div>
 <div class="fragment">Not enough understanding</div>
@@ -76,9 +76,11 @@ Note: 3 points climbing rule
 
 <!--s-->
 
-## What is refactoring?
+## <div class="font-green">What is refactoring?</div>
 
-> The process of restructuring existing computer code **without changing its external behavior**
+<!--v-->
+
+> Refactoring is the process of restructuring existing computer code **without changing its external behavior**
 
 --Wikipedia
 
@@ -92,7 +94,7 @@ Note: 3 points climbing rule
 
 <!--s-->
 
-## Why refactor?
+## <div class="font-green">Why refactor?</div>
 
 <!--v-->
 
@@ -102,11 +104,10 @@ Note: 3 points climbing rule
 
 <!--v-->
 
-## Why refactor?
-
 <div class="fragment"><span class="font-green">Requirements change</span></div>
 <div class="fragment"><span class="font-green">Understanding emerges</span> during programming</div>
 <div class="fragment"><span class="font-red">Can't reason</span> about the program</div>
+<div class="fragment">Can't separate <i>what</i> from <i>how</i></div>
 
 <!--v-->
 
@@ -118,7 +119,7 @@ Notes: **Fowler:** The purpose of refactoring is to make the software easier to 
 
 <!--s-->
 
-## Prerequisites for refactoring
+## <div class="font-green">Prerequisites for refactoring</div>
 
 <!--v-->
 
@@ -148,6 +149,7 @@ Note: The arising of novel and coherent structures, patterns and properties duri
 
 ``` text
                  +------> Programming --------+
+                 |                            |
                  |                            |
                  |                            v
 Requirements --> Understanding    Understanding --> Software
@@ -179,9 +181,9 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 <!--v-->
 
-#### Good tests are
+#### <div class="font-green">Good tests are</div>
 
-* Written first! ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
+* Written first ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 * Fast (feedback)
 * Independent (from one another)
 * Repeatable (not flaky)
@@ -194,17 +196,27 @@ Note: The suite of tests is there so we are not afraid of our code. --Uncle Bob
 
 --Robert C. Martin, Clean Code
 
-<!--v-->
-
-#### The Virtuous Cycle
-
-TODO: graphic to show testing, understanding, programming
-
 <!--s-->
 
-## Refactoring tips
+## <div class="font-green">Refactoring Tips</div>
 
 <!--v-->
+
+> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
+
+--Martin Fowler, Refactoring
+
+<!--v-->
+
+> The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
+
+--Eric Evans, Domain-Driven Design
+
+<div class="fragment font-green">Understanding --> Emergence</span></div>
+
+<!--v-->
+
+### <div class="font-green">Micro Refactorings</div>
 
 <div class="fragment">Write <span class="font-green">pure functions</span></div>
 <div class="fragment">Name your functions well</div>
@@ -214,7 +226,7 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 
 <!--v-->
 
-#### What are pure functions?
+#### <div class="font-green">What are pure functions?</div>
 
 <div class="fragment">Operate only on their arguments</div>
 <div class="fragment font-green">Deterministic</div>
@@ -225,7 +237,7 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 
 <!--v-->
 
-#### How to name functions
+#### <div class="font-green">How to name functions</div>
 
 <div class="fragment">Reveal <span class="font-green">intent</span></div>
 <div class="fragment">Nouns are for <span class="font-green">pure functions</span></div>
@@ -238,7 +250,7 @@ Notes: Consistency: within function, file, module, project, team, company -- in 
 
 <!--v-->
 
-#### How to write functions
+#### <div class="font-green">How to write functions</div>
 
 <div class="fragment">Short</div>
 <div class="fragment">One level of abstraction</div>
@@ -249,19 +261,13 @@ Notes: Consistency: within function, file, module, project, team, company -- in 
 
 Note: Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it _only_. 2) Functions should either _do_ something or _answer_ something, but not both.
 
-<!--v-->
 
-> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
-
---Martin Fowler, Refactoring
-
-<!--v-->
+<!--s-->
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 
 --Antoine de Saint-Exupery
 
 <!--s-->
-<div class="font-green">Thank you!</div>
 
-![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
+<div class="font-green">Thank you!</div>

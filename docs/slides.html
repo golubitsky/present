@@ -33,7 +33,7 @@ June 2020
 
 </script></section><section  data-markdown><script type="text/template">
 
-## Topics
+## <div class="font-green">Topics</div>
 
 What is refactoring?
 
@@ -45,11 +45,11 @@ Refactoring tips
 
 </script></section><section ><section data-markdown><script type="text/template">
 
-## Refactoring Résumé
+## <div class="font-green">Refactoring Résumé</div>
 
 </script></section><section data-markdown><script type="text/template">
 
-### Energy Production API
+### <div class="font-green">Energy Production API</div>
 
 Extracted 3 <span class="font-red">copied-and-pasted</span> and <span class="font-red">untested</span> instances of an energy production algorithm
 
@@ -69,7 +69,7 @@ Empowered team to <span class="font-green">deliver algorithm updates quickly</sp
 <aside class="notes"><p>Used by sales, designers, reporting across all of Tesla Energy; v1 != v2 != v3, target changed to v4 (3/4 of the way through)</p>
 </aside></script></section><section data-markdown><script type="text/template">
 
-### Other efforts
+### <div class="font-green">Other efforts</div>
 
 <div class="fragment">A refactoring  <span class="font-red">failure</span></div>
 <div class="fragment">Not enough understanding</div>
@@ -80,9 +80,11 @@ Empowered team to <span class="font-green">deliver algorithm updates quickly</sp
 <aside class="notes"><p>3 points climbing rule</p>
 </aside></script></section></section><section ><section data-markdown><script type="text/template">
 
-## What is refactoring?
+## <div class="font-green">What is refactoring?</div>
 
-> The process of restructuring existing computer code **without changing its external behavior**
+</script></section><section data-markdown><script type="text/template">
+
+> Refactoring is the process of restructuring existing computer code **without changing its external behavior**
 
 --Wikipedia
 
@@ -96,7 +98,7 @@ Empowered team to <span class="font-green">deliver algorithm updates quickly</sp
 
 </script></section></section><section ><section data-markdown><script type="text/template">
 
-## Why refactor?
+## <div class="font-green">Why refactor?</div>
 
 </script></section><section data-markdown><script type="text/template">
 
@@ -106,11 +108,10 @@ Empowered team to <span class="font-green">deliver algorithm updates quickly</sp
 
 </script></section><section data-markdown><script type="text/template">
 
-## Why refactor?
-
 <div class="fragment"><span class="font-green">Requirements change</span></div>
 <div class="fragment"><span class="font-green">Understanding emerges</span> during programming</div>
 <div class="fragment"><span class="font-red">Can't reason</span> about the program</div>
+<div class="fragment">Can't separate <i>what</i> from <i>how</i></div>
 
 </script></section><section data-markdown><script type="text/template">
 
@@ -121,7 +122,7 @@ Empowered team to <span class="font-green">deliver algorithm updates quickly</sp
 <aside class="notes"><p><strong>Fowler:</strong> The purpose of refactoring is to make the software easier to understand and modify.</p>
 </aside></script></section></section><section ><section data-markdown><script type="text/template">
 
-## Prerequisites for refactoring
+## <div class="font-green">Prerequisites for refactoring</div>
 
 </script></section><section data-markdown><script type="text/template">
 
@@ -149,6 +150,7 @@ Understanding is <span class="font-green">emergent</span>
 
 ``` text
                  +------> Programming --------+
+                 |                            |
                  |                            |
                  |                            v
 Requirements --> Understanding    Understanding --> Software
@@ -180,9 +182,9 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 </script></section><section data-markdown><script type="text/template">
 
-#### Good tests are
+#### <div class="font-green">Good tests are</div>
 
-* Written first! ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
+* Written first ([Uncle Bob explains why](https://www.youtube.com/watch?v=GvAzrC6-spQ))
 * Fast (feedback)
 * Independent (from one another)
 * Repeatable (not flaky)
@@ -194,17 +196,27 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 --Robert C. Martin, Clean Code
 
-</script></section><section data-markdown><script type="text/template">
-
-#### The Virtuous Cycle
-
-TODO: graphic to show testing, understanding, programming
-
 </script></section></section><section ><section data-markdown><script type="text/template">
 
-## Refactoring tips
+## <div class="font-green">Refactoring Tips</div>
 
 </script></section><section data-markdown><script type="text/template">
+
+> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
+
+--Martin Fowler, Refactoring
+
+</script></section><section data-markdown><script type="text/template">
+
+> The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
+
+--Eric Evans, Domain-Driven Design
+
+<div class="fragment font-green">Understanding --> Emergence</span></div>
+
+</script></section><section data-markdown><script type="text/template">
+
+### <div class="font-green">Micro Refactorings</div>
 
 <div class="fragment">Write <span class="font-green">pure functions</span></div>
 <div class="fragment">Name your functions well</div>
@@ -214,7 +226,7 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 
 </script></section><section data-markdown><script type="text/template">
 
-#### What are pure functions?
+#### <div class="font-green">What are pure functions?</div>
 
 <div class="fragment">Operate only on their arguments</div>
 <div class="fragment font-green">Deterministic</div>
@@ -225,7 +237,7 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 
 </script></section><section data-markdown><script type="text/template">
 
-#### How to name functions
+#### <div class="font-green">How to name functions</div>
 
 <div class="fragment">Reveal <span class="font-green">intent</span></div>
 <div class="fragment">Nouns are for <span class="font-green">pure functions</span></div>
@@ -237,7 +249,7 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 <aside class="notes"><p>Consistency: within function, file, module, project, team, company -- in descending order of importance</p>
 </aside></script></section><section data-markdown><script type="text/template">
 
-#### How to write functions
+#### <div class="font-green">How to write functions</div>
 
 <div class="fragment">Short</div>
 <div class="fragment">One level of abstraction</div>
@@ -247,23 +259,15 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 <div class="fragment">Okay fine, but certainly not in business logic</div>
 
 <aside class="notes"><p>Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it <em>only</em>. 2) Functions should either <em>do</em> something or <em>answer</em> something, but not both.</p>
-</aside></script></section><section data-markdown><script type="text/template">
-
-> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
-
---Martin Fowler, Refactoring
-
-</script></section><section data-markdown><script type="text/template">
+</aside></script></section></section><section  data-markdown><script type="text/template">
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 
 --Antoine de Saint-Exupery
 
-</script></section></section><section  data-markdown><script type="text/template">
-<div class="font-green">Thank you!</div>
+</script></section><section  data-markdown><script type="text/template">
 
-![https://www.osnews.com/story/19266/wtfsm/](./assets/wtf-per-minute.jpg "WTF/m")
-</script></section></div>
+<div class="font-green">Thank you!</div></script></section></div>
     </div>
 
     <script src="./js/reveal.js"></script>
