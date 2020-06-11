@@ -69,7 +69,6 @@ Note: Used by sales, designers, reporting across all of Tesla Energy; v1 != v2 !
 <div class="fragment">A refactoring  <span class="font-red">failure</span></div>
 <div class="fragment">Not enough understanding</div>
 <div class="fragment">Tests were too few and too slow</div>
-<div class="fragment">Infrequent releases</div>
 <div class="fragment">Too ambitious</div>
 <div class="fragment font-green">...smaller, incremental refactors</div>
 
@@ -204,8 +203,6 @@ TODO: graphic to show testing, understanding, programming
 <!--s-->
 
 ## Refactoring tips
-
-<div class="fragment">Good news, I only have a couple!</div>
 
 <!--v-->
 
