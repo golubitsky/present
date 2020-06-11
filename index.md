@@ -256,7 +256,7 @@ Bigger refactorings <span class="font-green">emerge</span>
 
 <!--v-->
 
-> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have seen these things, because I'm just not clever enough to visualize all this in my head.
 
 --Martin Fowler, Refactoring
 
