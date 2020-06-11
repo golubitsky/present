@@ -20,7 +20,7 @@ npm install
 ### Deploy
 
 * Builds are setup via [Travis CI](https://travis-ci.com/github/golubitsky/refactoring) for the `master` branch.
-* Builds generate static content in `/docs` based on `slides.md` .
+* Builds generate static content in `/docs` based on `index.md` .
 * Travis CI pushes the `gh-pages` branch.
 * [Github settings](https://github.com/golubitsky/refactoring/settings) are to build from `gh-pages` .
 
@@ -38,5 +38,5 @@ npm install
 
 ### Bugs with the framework
 
-* Can't get `--css styles.css` to work in Github Pages (works locally). Workaround: `<styles>` tag in `slides.md` .
+* Can't get `--css styles.css` to work in Github Pages (works locally). Workaround: `<styles>` tag in `index.md` .
 * Can't get `--watch` to work.

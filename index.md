@@ -91,6 +91,7 @@ Note: 3 points climbing rule
 <div class="fragment">New features</div>
 <div class="fragment">Fixing bugs</div>
 <div class="fragment">Optimization</div>
+<div class="fragment">Introducing bugs</div>
 
 <!--s-->
 
@@ -196,6 +197,10 @@ Note: The suite of tests is there so we are not afraid of our code. --Uncle Bob
 
 --Robert C. Martin, Clean Code
 
+<!--v-->
+
+![](./assets/red_green_refactor.jpg "Red Green Refactor")
+
 <!--s-->
 
 ## <div class="font-green">Refactoring</div>
@@ -260,7 +265,6 @@ Bigger refactorings <span class="font-green">emerge</span>
 > The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
 
 --Eric Evans, Domain-Driven Design
-
 
 <!--s-->
 
