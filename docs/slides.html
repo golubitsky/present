@@ -41,7 +41,7 @@ Why refactor?
 
 Prerequisites for refactoring
 
-Refactoring tips
+Refactoring
 
 </script></section><section ><section data-markdown><script type="text/template">
 
@@ -164,7 +164,7 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 </script></section><section data-markdown><script type="text/template">
 
-> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
 --Martin Fowler, Refactoring
 
@@ -198,25 +198,9 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 </script></section></section><section ><section data-markdown><script type="text/template">
 
-## <div class="font-green">Refactoring Tips</div>
+## <div class="font-green">Refactoring</div>
 
 </script></section><section data-markdown><script type="text/template">
-
-> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
-
---Martin Fowler, Refactoring
-
-</script></section><section data-markdown><script type="text/template">
-
-> The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
-
---Eric Evans, Domain-Driven Design
-
-<div class="fragment font-green">Understanding --> Emergence</span></div>
-
-</script></section><section data-markdown><script type="text/template">
-
-### <div class="font-green">Micro Refactorings</div>
 
 <div class="fragment">Write <span class="font-green">pure functions</span></div>
 <div class="fragment">Name your functions well</div>
@@ -259,7 +243,24 @@ Avoid <span class="font-red">state</span> and <span class="font-red">side effect
 <div class="fragment">Okay fine, but certainly not in business logic</div>
 
 <aside class="notes"><p>Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it <em>only</em>. 2) Functions should either <em>do</em> something or <em>answer</em> something, but not both.</p>
-</aside></script></section></section><section  data-markdown><script type="text/template">
+</aside></script></section><section data-markdown><script type="text/template">
+
+Bigger refactorings <span class="font-green">emerge</span>
+
+</script></section><section data-markdown><script type="text/template">
+
+> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+
+--Martin Fowler, Refactoring
+
+</script></section><section data-markdown><script type="text/template">
+
+> The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
+
+--Eric Evans, Domain-Driven Design
+
+
+</script></section></section><section  data-markdown><script type="text/template">
 
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 

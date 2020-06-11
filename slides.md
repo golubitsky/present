@@ -35,7 +35,7 @@ Why refactor?
 
 Prerequisites for refactoring
 
-Refactoring tips
+Refactoring
 
 <!--s-->
 
@@ -163,7 +163,7 @@ Understanding is an <span class="font-green">emergent opportunity to refactor</s
 
 <!--v-->
 
-> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
 
 --Martin Fowler, Refactoring
 
@@ -198,25 +198,9 @@ Note: The suite of tests is there so we are not afraid of our code. --Uncle Bob
 
 <!--s-->
 
-## <div class="font-green">Refactoring Tips</div>
+## <div class="font-green">Refactoring</div>
 
 <!--v-->
-
-> I often refactor just when I'm reading some code. That way as I gain understanding about the program, I embed that understanding into the code for later so I don't forget what I learned.
-
---Martin Fowler, Refactoring
-
-<!--v-->
-
-> The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
-
---Eric Evans, Domain-Driven Design
-
-<div class="fragment font-green">Understanding --> Emergence</span></div>
-
-<!--v-->
-
-### <div class="font-green">Micro Refactorings</div>
 
 <div class="fragment">Write <span class="font-green">pure functions</span></div>
 <div class="fragment">Name your functions well</div>
@@ -260,6 +244,22 @@ Notes: Consistency: within function, file, module, project, team, company -- in 
 <div class="fragment">Okay fine, but certainly not in business logic</div>
 
 Note: Uncle Bob: 1) Functions should do one thing. They should do it well. They should do it _only_. 2) Functions should either _do_ something or _answer_ something, but not both.
+
+<!--v-->
+
+Bigger refactorings <span class="font-green">emerge</span>
+
+<!--v-->
+
+> As the code gets clearer, I find I can see things about the design that I could not see before. Had I not changed the code, I probably never would have see these things, because I'm just not clever enough to visualize all this in my head.
+
+--Martin Fowler, Refactoring
+
+<!--v-->
+
+> The refactorings that have the greatest impact on the viability of the system are those motivated by new insights into the domain or those that clarify the model's expression through the code.
+
+--Eric Evans, Domain-Driven Design
 
 
 <!--s-->
