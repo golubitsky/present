@@ -8,7 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "reveal-md": "3.4.7"
+    "reveal-md": "5.4.0"
   },
   "scripts": {
     "build": "reveal-md index.md --static docs --static-dirs=assets",
